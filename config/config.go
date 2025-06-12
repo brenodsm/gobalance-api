@@ -9,11 +9,15 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// Config armazena as configurações essenciais para a aplicação,
+// incluindo dados de conexão e porta do servidor.
 type Config struct {
 	ConnectionString string
 	Port             int
 }
 
+// NewConfig carrega as configurações da aplicação a partir do arquivo .env
+// e variáveis de ambiente, aplicando valores padrão quando necessário.
 func NewConfig() (*Config, error) {
 	if err := godotenv.Load(); err != nil {
 		return nil, fmt.Errorf("erro ao carregar .env: %v", err)
