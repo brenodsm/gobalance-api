@@ -1,6 +1,6 @@
 package model
 
-//User é um modelo que representa um usuário do sistema
+// User representa os dados de um usuário no sistema
 type User struct {
 	Name      string `json:"name,omitempty"`
 	Email     string `json:"email,omitempty"`
